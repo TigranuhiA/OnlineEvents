@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import classes from './header.module.css';
+import { useDispatch, useSelector } from "react-redux";
+import { removeUser, userSelector } from "../../reduxToolkit/slices/userSlice";
+
 
 // const links = [
 //     {
@@ -12,7 +15,17 @@ import classes from './header.module.css';
 //     })
 // }    // chshtel te inchi chi linum ayspes
 
-const Header =() =>{
+const Header =() => {
+    const dispatch = useDispatch();
+    const user = useSelector(userSelector);
+
+    const logOut = () =>{
+        sessionStorage.removeItem("user")
+        localStorage.removeItem("user")
+        dispatch(removeUser())
+    }
+
+
     return (
         <header className={classes.header}>
             <div className={classes.divName}>
@@ -41,8 +54,12 @@ const Header =() =>{
                         })} 
                         to="register">Register</NavLink>
                 </li>
-                <input className={classes.logOut} type="button" value="Log out"/>
             </ul>
+
+            <div className={classes.headerInfo}>
+                {user && <input className={classes.link} type="button" onClick={logOut} value='Log out'/>}
+                {user && <div className={classes.userLogo}>{user}</div>}
+            </div>
         </header>
     )
 }
