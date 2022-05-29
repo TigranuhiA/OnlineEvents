@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate  } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
 import Main from './components/Main/main';
@@ -10,7 +10,8 @@ import HomePage from './components/HomePage/homePage';
 import Register from './components/Register/register';
 
 
-//<Route path='*' element={<Navigate to="homePage"/>} />
+
+//<Route path="auth" element={<Authorization />} />
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
         <Route path="" element={<HomePage />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path='*' element={<Navigate to=""/>} />
       </Routes>
-      <Main/>
       <Footer/>
-      <Questions/>
+
+      
       
      
     </div>

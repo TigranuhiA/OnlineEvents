@@ -1,17 +1,44 @@
 import { useForm } from "react-hook-form";
 import classes from './login.module.css'
-// import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {baseUrl} from "../../api/api";
+import axios from "axios";
+import {setUser} from "../../reduxToolkit/slices/userSlice";
+import { useAuthRoute } from "../../contexts/RouteProvider"; 
+import {useState} from "react";
+import Register from "../Register/register";
 
 const Login = () => {
-    // const navigate = useNavigate();
+    const [isLoginSucceed, setIsLoginSucceed] = useState(true)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-  
-    const {register, handleSubmit, formSate: {errors, isValid}} = useForm();
-    const onSubmit = (data) => {
-      alert(JSON.stringify(data))
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    const onSubmit = data => {
+        axios.get(`${baseUrl}/users`)
+            .then(res => {
+                const user = res.data.find(user => user.name === data.login && user.password === data.password)
+                if (user) {
+                    if(data.save) {
+                        localStorage.setItem('user', user.name)
+                    } else {
+                        sessionStorage.setItem('user', user.name)
+                    }
+                    dispatch(setUser(data.login))
+                     navigate('../homePage')
+                } 
+                else {
+                    setIsLoginSucceed(false);
+                      setTimeout(() => {
+                        navigate('../register')
+                        
+                      }, 1000)
+                    
+                }
+            })
     }
-
 
     return (
       <div>
@@ -59,13 +86,18 @@ const Login = () => {
           <div className={classes.div}> 
               {errors?.password && <p>{errors?.password?.message || "Error"}</p>}
           </div>
-
           <label>
-            <input className={classes.submit} type="submit" disabled={!isValid}  />
+                    <input type="checkbox" {...register('save')}/>
+                    Remember me
+                </label>
+          <label>
+            <input className={classes.submit} type="submit" value="Log in"  /> 
           </label>
         </form>
 
-        <button>Create an account</button>
+        {
+          isLoginSucceed || <button onClick={() => {<Register/>}}>You haven't got an account, go to register page</button>
+         }
         
       </div>
     )

@@ -9,7 +9,7 @@ const HomePage = () => {
 // }
   return (
     <div>
-      f
+      
     </div>
         // <button onClick={changePage}>navigate</button>
     

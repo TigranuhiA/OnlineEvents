@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 //import { createRoot } from 'react-dom/client';
-// import { Provider } from 'react-redux';
-// import { store } from './app/store';
+import { Provider } from 'react-redux';
+import  store  from './reduxToolkit/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -15,12 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-     {/* <Provider store={store}>
-      toolkiti hamar e
-    </Provider> */}
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
