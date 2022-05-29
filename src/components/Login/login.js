@@ -11,7 +11,7 @@ import {useState} from "react";
 import Register from "../Register/register";
 
 const Login = () => {
-    const [isAuthSucceed, setIsAuthSucceed] = useState(true)
+    const [isLoginSucceed, setIsLoginSucceed] = useState(true)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -30,8 +30,12 @@ const Login = () => {
                      navigate('../homePage')
                 } 
                 else {
-                    setIsAuthSucceed(false)
-                    navigate('../register')
+                    setIsLoginSucceed(false);
+                      setTimeout(() => {
+                        navigate('../register')
+                        
+                      }, 1000)
+                    
                 }
             })
     }
@@ -91,9 +95,9 @@ const Login = () => {
           </label>
         </form>
 
-        {/* {
-          isAuthSucceed || <button onClick={() => {<Register/>}}>You haven't got an account, go to register page</button>
-         } */}
+        {
+          isLoginSucceed || <button onClick={() => {<Register/>}}>You haven't got an account, go to register page</button>
+         }
         
       </div>
     )

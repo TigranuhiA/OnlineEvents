@@ -6,10 +6,14 @@ import {useState} from "react";
 import {baseUrl} from "../../api/api";
 import axios from "axios";
 import Login from '../Login/login';
+import { useNavigate } from 'react-router-dom'; 
+
+
 
 const Register = () => {
 
-  const [isAuthSucceed, setIsAuthSucceed] = useState(false)
+  const [isRegisterSucceed, setIsRegisterSucceed] = useState(false);
+  const navigate = useNavigate()
     
   const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = data => {
@@ -18,9 +22,10 @@ const Register = () => {
             password: data.password
         })
 
-        setIsAuthSucceed(true)
+        setIsRegisterSucceed(true)
         setTimeout(() => {
-          {<Login />}
+          navigate('../login')
+          //{<Login />}
         }, 1000)
     }
 
@@ -98,7 +103,7 @@ const Register = () => {
 
           <p> <Link to="/login"> If you have an account, go to login page </Link> </p>  
           {
-                isAuthSucceed && <p>Registration has been succeessfully completed!</p>
+                isRegisterSucceed && <p>Registration has been succeessfully completed!</p>
             }
         </form>
         

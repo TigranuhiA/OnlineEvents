@@ -16,24 +16,10 @@
       "password": "33333"
     },
     {
-      "name": "xgnxf",
-      "password": "111",
-      "id": "sYb7JVT"
-    },
-    {
-      "name": "xgnxf",
-      "password": "111",
-      "id": "1KzDCc4"
-    },
-    {
-      "name": "fnxf",
-      "password": "111",
-      "id": "AEVuD5P"
-    },
-    {
-      "name": "fnxf",
-      "password": "111",
-      "id": "HtRPMl0"
+      "id": "4",
+      "name": "admin",
+      "password": "44444" 
     }
+    
   ]
 }
