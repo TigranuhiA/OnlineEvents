@@ -1,0 +1,77 @@
+export const EN = {
+    "travel with us": "Travel with us",
+    phone: 'Phone',
+    home: 'Home',
+    register: "Register",
+    "Log out": 'Log out',
+    'Remember me': 'Remember me',
+    "log in": 'Login',
+    password: 'Password',
+    "Enter your login":  "Enter your login",
+    "Enter your password": "Enter your password",
+    "go to register": "You haven't got an account, go to register page",
+    "Create an account" : "Create an account",
+    "Repeat Password" : "Repeat Password",
+    formMessageRequired: "field must be required",
+    formMessageMinLength: "The minimum length of the value 3",
+    formMessageMaxLength: "The max length of the value 20",
+    "If you have an account, go to login page" : "If you have an account, go to login page",
+    "Registration has been succeessfully completed!": "Registration has been succeessfully completed!",
+    Armenian: 'Armenian',
+    Russian: 'Russian',
+    English: 'English',
+}
+export const RU = {
+    "travel with us": 'Путешествуй с нами',
+    phone: 'Телефон',
+    home: 'Главная страница',
+    register: 'Зарегистрироваться',
+    "Log out": 'Выйти',
+    'Remember me': 'Запомнить',
+    "log in": 'Логин',
+    password: 'Пароль',
+    "Enter your login": "Введите свой логин",
+    "Enter your password": "Введите свой пароль",
+    "go to register": 'У вас нет учетной страницы, перейдите на страницу регистрации',
+    "Create an account" : "Создать аккаунт",
+    "Repeat Password" : "Повторите пароль",
+    formMessageRequired: "Поле обязательно для заполнения",
+    formMessageMinLength: "Минимальная длина значения 3",
+    formMessageMaxLength: "Максимальная длина значения 20",
+    "If you have an account, go to login page": "Если у вас есть учетная запись, перейдите на страницу входа",
+    "Registration has been succeessfully completed!": "Регистрация успешно завершена!",
+    Armenian: 'Армянский',
+    Russian: 'Русский',
+    English: 'Английский'
+}
+export const AM = {
+    "travel with us": 'Ճանապարհորդիր մեզ հետ',
+    phone: 'Հեռախոսահամար',
+    home: 'Գլխավոր էջ',
+    register: "Գրանցվել",
+    "Log out": 'Դուրս գալ',
+    'Remember me': 'Հիշել',
+    "log in": 'Մուտք',
+    password: 'Գաղտնաբառ',
+    "Enter your login": "Մուտքագրեք ձեր մուտքանունը",
+    "Enter your password": "Մուտքագրեք ձեր գաղտնաբառը",
+    "go to register": "Դուք չունեք էջ, գնացեք գրանցման էջ",
+    "Create an account" : "Ստեղծել օգտահաշիվ",
+    "Repeat Password" : "Կրկնեք գաղտնաբառը",
+    formMessageRequired: "Դաշտը պետք է պարտադիր լրացված լինի",
+    formMessageMinLength: "Արժեքի նվազագույն երկարությունը 3  է",
+    formMessageMaxLength: "Արժեքի առավելագույն երկարությունը 20 է",
+    "If you have an account, go to login page" : "Եթե ունեք օգտահաշիվ, գնացեք մուտքի էջ",
+    "Registration has been succeessfully completed!" : "Գրանցումը հաջողությամբ կատարվեց" ,
+    Armenian: 'Հայերեն',
+    Russian: 'Ռուսերեն',
+    English: 'Անգլերեն'
+}
+
+const languages = {
+    AM,
+    RU,
+    EN
+}
+
+export const getLanguage = lang => languages[lang];

@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import LanguageProvider from './contexts/LanguageProvider';
 
 // const container = document.getElementById('root');
 // const root = createRoot(container);     // sa toolkit-i jamanak
@@ -16,9 +17,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </LanguageProvider>
     </Provider>
   </React.StrictMode>
 );
