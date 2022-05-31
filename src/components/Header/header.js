@@ -40,7 +40,7 @@ const Header =() => {
                     <NavLink className={({isActive}) => classNames(classes.link, {
                             [classes.active]: isActive
                         })} 
-                        to="">Home</NavLink>
+                        to="homepage">Home</NavLink>
                 </li>
                 <li>
                     <NavLink className={({isActive}) => classNames(classes.link, {
