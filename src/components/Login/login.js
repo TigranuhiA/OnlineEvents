@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {baseUrl} from "../../api/api";
 import axios from "axios";
 import {setUser} from "../../reduxToolkit/slices/userSlice";
-import { useAuthRoute } from "../../contexts/RouteProvider"; 
+
 import {useState} from "react";
 import Register from "../Register/register";
 
