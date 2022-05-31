@@ -7,6 +7,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import RouteProvider from './contexts/RouteProvider';
+// import UserProvider from './contexts/UserProvider';
 
 // const container = document.getElementById('root');
 // const root = createRoot(container);     // sa toolkit-i jamanak
@@ -17,7 +19,11 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+         {/* <UserProvider> */}
+           <RouteProvider>
+              <App />
+          </RouteProvider>
+        {/* </UserProvider>            */}
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
