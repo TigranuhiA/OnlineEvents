@@ -50,7 +50,8 @@ const Header =() => {
                                     })}
                                     to={link.to}
                                 >{t(link.title)}</NavLink>
-                </li>
+
+                            </li>
                         )
                     })
                 }
