@@ -26,20 +26,24 @@ const Questions = () => {
     }
 
     return ( 
-    
-    
+   
+       
     list.map(e => {
                     return (
+                        
                         <React.Fragment key={e.id}>
-                            <hr style={{
-                                width: '50%',
-                            }}/>
+                            
                             <div className='questions'>
-                                <p>Questions: {e.question}</p>
-                                <p className={e.visible? 'answerShow': 'answerHide'}>Answer: {e.answer}</p>
-                                <button onClick={but} name={e.id}>ok</button>
+                                <p>{e.question}</p>
+                                <br></br>
+                                <p className={e.visible? 'answerShow': 'answerHide'}>{e.answer}</p>
+                                <br></br>
+                                <div><button onClick={but} name={e.id}>V</button></div>
                             </div>
                              </React.Fragment>
+                            
                     )})
+      
+   
 )}
 export default Questions;

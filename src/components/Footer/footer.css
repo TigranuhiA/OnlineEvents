@@ -1,6 +1,84 @@
-.fbDesign {
-    background-color: green;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+.foot {
+    background-color: rgb(204, 230, 204);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    height: 453px;
+    margin-top: 50px;
+    background: #d8ecbb;
+}
+
+.footer_first {
+    display: flex;
+    gap: 0 15px;
+    height: 400px;
+}
+
+.footer_first div {
+    height: 268px;
+    margin-top: 32px;
+    /* margin-left: 64px; */
+    flex-grow: 1;
+}
+
+.footer_first ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-right: 2px solid rgba(182, 246, 143, 0.5);
+}
+
+.footer_first ul li {
+    padding: 16px;
+}
+
+.footer_first ul li:first-child {
+    text-transform: uppercase;
+}
+
+.footer_first a {
+    text-decoration: none;
+    width: 99px;
+    height: 22px;
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer_inner_forth {
+    margin-top: 42px;
+}
+
+.footer_forth_inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_second {
+    border-top: 2px solid #FFFFFF;
+}
+
+.footer_second {
+    text-align: center;
+    margin-top: -31px;
+}
+
+.footer_second p {
+    color: #00743e;
+    display: inline-block;
+    vertical-align: middle;
+    width: 540px;
+    height: 26px;
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
 }

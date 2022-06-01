@@ -8,5 +8,14 @@
 
 .questions {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid rgb(112, 241, 170);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(187, 246, 209);
+}
+
+.mainDiv {
+    border: 2px solid black;
 }
