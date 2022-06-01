@@ -1,0 +1,12 @@
+.answerShow {
+    display: block;
+}
+
+.answerHide {
+    display: none;
+}
+
+.questions {
+    display: flex;
+    justify-content: flex-start;
+}
