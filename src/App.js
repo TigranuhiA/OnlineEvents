@@ -2,9 +2,14 @@ import React from 'react';
 import { Route, Routes, Navigate  } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
+
+import Footer from './components/Footer/footer';
+import Questions from './components/Questions/questions'
+
 // import Main from './components/Main/main';
 import Footer from './components/Footer/footer';
 import Questions from './components/Questions/questions'
+
 import Login  from './components/Login/login';
 import HomePage from './components/HomePage/homePage';
 import Register from './components/Register/register';
@@ -21,20 +26,21 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-        <Route path="homepage/*" element={<HomePage />}>
-          <Route path="tour1" element={<Tour1/>}/>
-          <Route path="tour2" element={<Tour2/>}/>
-          <Route path="tour3" element={<Tour3/>}/>
-          <Route path="tour4" element={<Tour4/>}/>
-          <Route path="tour5" element={<Tour5/>}/>
-          <Route path="tour6" element={<Tour6/>}/>
-        </Route>
+        <Route path="homepage" element={<HomePage />} />
+        <Route path="homepage/tour1" element={<Tour1/>}/>
+        <Route path="homepage/tour2" element={<Tour2/>}/>
+        <Route path="homepage/tour3" element={<Tour3/>}/>
+        <Route path="homepage/tour4" element={<Tour4/>}/>
+        <Route path="homepage/tour5" element={<Tour5/>}/>
+        <Route path="homepage/tour6" element={<Tour6/>}/>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path='*' element={<Navigate to="homepage" replace/>} />
       </Routes>
-      <Questions/>
-      <Footer/>
+          
+      
+      {/* <Questions/>
+      <Footer/> */}
 
       
       
