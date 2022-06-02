@@ -2,8 +2,14 @@ import React from 'react';
 import { Route, Routes, Navigate  } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
-// import Footer from './components/Footer/footer';
-// import Questions from './components/Questions/questions'
+
+import Footer from './components/Footer/footer';
+import Questions from './components/Questions/questions'
+
+// import Main from './components/Main/main';
+import Footer from './components/Footer/footer';
+import Questions from './components/Questions/questions'
+
 import Login  from './components/Login/login';
 import HomePage from './components/HomePage/homePage';
 import Register from './components/Register/register';

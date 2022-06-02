@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link  } from 'react-router-dom';
 import {tour3, price} from "../helpers/constant";
 import classes from './tour.module.css';
@@ -34,7 +35,21 @@ const Tour3=()=>{
             {<div> <Link to="/login"> ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ </Link> </div>  }
             {<div> <Link to="/login"> ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ </Link> </div>}
                       
-    
+
+import {tour5} from "../helpers/constant";
+import {price} from "../helpers/constant"
+import { useTranslate} from "../../../contexts/LanguageProvider"
+
+
+const Tour5=()=>{
+    const {t} = useTranslate();
+    return (
+        <div >
+          <h1>{t("tour5.title")}</h1>
+          <img src={tour5.tour5_img} alt="#" />
+           <p>{t("tour5.text")}</p> 
+           <h3>{t("price")}</h3>
+
         </div>
     )
 }

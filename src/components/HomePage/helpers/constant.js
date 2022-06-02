@@ -12,7 +12,7 @@ export const IMAGES=[
         tour_image:'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
     },
     {
-        title:"ՏՈՐԵՐ ԴԵՊԻ ՊԱՏՄԱՄՇԱԿՈՒԹԱՅԻՆ ՎԱՅՐԵՐ",
+        title:"ՏՈԻՐԵՐ ԴԵՊԻ ՊԱՏՄԱՄՇԱԿՈՒԹԱՅԻՆ ՎԱՅՐԵՐ",
         path:"tour3",
         tour_image:'https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
     },
