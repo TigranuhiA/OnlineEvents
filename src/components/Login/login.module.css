@@ -90,7 +90,16 @@
     
 }
 
+/* .label {
+   
+} */
   
+  /* .p {
+    color: #bf1650;
+    text-align: center;
+  } */
+  
+
 .inputInfo {
     display: flex;
     flex-direction: column;
@@ -123,11 +132,11 @@
     padding: 2px 2px;
     font-size: 17px;
     border: 1px solid white;
-    color:  rgba(103, 18, 114, 0.938);
+    color: green;
   }
   
   .submit {
-    background: rgba(174, 39, 192, 0.473);
+    background: green;
     color: white;
     border: none;
     margin-top: 40px;

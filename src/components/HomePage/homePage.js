@@ -4,20 +4,18 @@ import {  Link,  Outlet } from 'react-router-dom';
 import {IMAGES, tour_header} from "./helpers/constant";
 import classes from './homePage.module.css';
 import {CustomLink} from "./CustomLink"
-import { useTranslate} from "../../contexts/LanguageProvider"
 
 
 
 const HomePage = () => {
-
-const {t} = useTranslate();
-
+//     const navigate = useNavigate();
+//     const changePage = () => {
+//         navigate("../homePage", {replace: true}) // vor istorian chpahi ogtagorcum enq  replace: true
+// }
   return (
     <div >
       <div className={classes.tourHeader}>
-        <h1>{t(tour_header)
-        
-        }</h1>
+        <h1>{tour_header}</h1>
       </div>
       <nav className={classes.container}>      
 {
@@ -26,7 +24,7 @@ const {t} = useTranslate();
             <Link to={item.path}> 
             <div  className={classes.tour_item} >
             <img src={item.tour_image} alt="#"/>
-            <h3 className={classes.item_header}>{t(item.title)}</h3>
+            <h3 className={classes.item_header}>{item.title}</h3>
           </div>
           </Link>
           

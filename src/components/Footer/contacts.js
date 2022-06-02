@@ -1,9 +1,9 @@
 const ContactUs=()=>{
     return(
         <ul>
-            <li>Adress: ,sjdskjlks</li>
-            <li>Phone: ,sjdskjlks</li>
-            <li>E-mail: ,sjdskjlks</li>
+            <li>Address: Paradise</li>
+            <li>Phone: 000000000</li>
+            <li>E-mail: paradise@gmail.com</li>
         </ul>
     )
 }

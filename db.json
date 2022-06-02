@@ -21,8 +21,9 @@
     {
       "id": "4",
       "name": "admin",
-      "password": "44444",
+      "password": "44444" ,
       "money": "100000"
     }
+    
   ]
 }

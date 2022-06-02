@@ -7,7 +7,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
-import LanguageProvider from './contexts/LanguageProvider';
 
 
 // const container = document.getElementById('root');
@@ -18,11 +17,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <LanguageProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </LanguageProvider>
+      <BrowserRouter>
+                
+              <App />
+          
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

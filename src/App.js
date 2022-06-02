@@ -3,8 +3,8 @@ import { Route, Routes, Navigate  } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
 // import Main from './components/Main/main';
-import Footer from './components/Footer/footer';
-import Questions from './components/Questions/questions'
+// import Footer from './components/Footer/footer';
+// import Questions from './components/Questions/questions'
 import Login  from './components/Login/login';
 import HomePage from './components/HomePage/homePage';
 import Register from './components/Register/register';
@@ -15,6 +15,7 @@ import Tour4 from './components/HomePage/Tours/Tour4';
 import Tour5 from './components/HomePage/Tours/Tour5';
 import Tour6 from './components/HomePage/Tours/Tour6';
 
+//<Route path="auth" element={<Authorization />} />
 
 function App() {
   return (
