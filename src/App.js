@@ -15,7 +15,6 @@ import Tour4 from './components/HomePage/Tours/Tour4';
 import Tour5 from './components/HomePage/Tours/Tour5';
 import Tour6 from './components/HomePage/Tours/Tour6';
 
-//<Route path="auth" element={<Authorization />} />
 
 function App() {
   return (

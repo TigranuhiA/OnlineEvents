@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import {useState} from "react";
 import {baseUrl} from "../../api/api";
 import axios from "axios";
-import Login from '../Login/login';
 import { useNavigate } from 'react-router-dom'; 
-import {useDispatch} from "react-redux";
-import {setUser} from "../../reduxToolkit/slices/userSlice";
 import { useTranslate} from "../../contexts/LanguageProvider"
 
 

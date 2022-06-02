@@ -26,14 +26,13 @@ const Header =() => {
         changeLanguage(event.target.value);
     }
 
-    //(link.title === "home"  && (user  && !(link.title === "log in") && !(link.title === "register"))) || 
     return (
         <header className={classes.header}>
             <div className={classes.divName}>
                 {t('travel with us')}
             </div>
             <div className={classes.divPhone}>
-            {t('phone')} 000 000000
+            {t('phone')} : 033 333-333
             </div>
 
             <ul className={classes.ul}>

@@ -9,10 +9,7 @@ import { useTranslate} from "../../contexts/LanguageProvider"
 
 
 const HomePage = () => {
-//     const navigate = useNavigate();
-//     const changePage = () => {
-//         navigate("../homePage", {replace: true}) // vor istorian chpahi ogtagorcum enq  replace: true
-// }
+
 const {t} = useTranslate();
 
   return (
