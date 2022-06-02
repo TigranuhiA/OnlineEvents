@@ -26,7 +26,7 @@ const Header =() => {
         changeLanguage(event.target.value);
     }
 
-
+    //(link.title === "home"  && (user  && !(link.title === "log in") && !(link.title === "register"))) || 
     return (
         <header className={classes.header}>
             <div className={classes.divName}>
@@ -39,7 +39,9 @@ const Header =() => {
             <ul className={classes.ul}>
                 {
                     HEADER_LINKS.map(link => {
-                        if ((link.title === "log in"  && user ) ||
+                        if (  
+                        (link.title === "home" && ( user || (link.title === "log in" && link.title === "register" ))) ||
+                        (link.title === "log in"  && user ) ||
                         (link.title === "register" && user )) {
                             return null;
                         }

@@ -126,6 +126,9 @@ const Register = () => {
           {
                 isRegisterSucceed && <p>{t("Registration has been succeessfully completed!")}</p>
             }
+            {
+                !isRegisterSucceed && <p>{t("Registration has been failed!")}</p>
+            }
         </form>
         
   )
