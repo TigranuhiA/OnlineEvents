@@ -23,31 +23,29 @@ const Register = () => {
             .then(res => {
                 const user = res.data.find(user => user.name === data.login)
                 if (user) {
-                  navigate('../login')
-                } else {
-                      axios.post(`${baseUrl}/users`, {
-                    name: data.login,
-                    password: data.password
-                  })
-
-                  setIsRegisterSucceed(true)
+                 alert(t("Registration has been failed! You have an account")) 
                   setTimeout(() => {
                     navigate('../login')
-                  }, 3000)
-
-              //repeatPassword: data.repeatPassword
-                // if(data.password === data.repeatPassword){
-                //   setIsRegisterSucceed(true)
-                //   setTimeout(() => {
-                //     navigate('../login')
-                //   }, 3000)
-                // }
-               
-               }
+                  }, 2000)
+                } 
+                else {
+                  // if(data.password !== data.repeatPassword){
+                  //   alert("Registration has been failed, parol")
+                  // }
+                  // else{
+                    axios.post(`${baseUrl}/users`, {
+                      name: data.login,
+                      password: data.password,
+                      repeatPassword: data.repeatPassword
+                    })
+                    setIsRegisterSucceed(true)
+                    setTimeout(() => {
+                      navigate('../login')
+                  }, 2000)
+                  // }
+                } 
           })
-
-    }
-
+    } 
 
   return (
     <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
@@ -89,7 +87,7 @@ const Register = () => {
             }
              )} 
              type="password" 
-             placeholder={t("Enter your password")} />
+             placeholder={t("Enter your password")}/>
           </label>
           <div className={classes.div}> 
               {errors?.password && <p>{errors?.password?.message || "Error"}</p>}
@@ -109,23 +107,24 @@ const Register = () => {
             }
              )} 
              type="password" 
-             placeholder={t("Repeat Password")} />
+             placeholder={t("Repeat Password")}/>
           </label>
           <div className={classes.div}> 
               {errors?.password && <p>{errors?.password?.message || "Error"}</p>}
           </div>
 
           <label>
-            <input className={classes.submit} type="submit" value={t("register")} />
+            <input className={classes.submit} type="submit"  value={t("register")} />
           </label>
 
           <p> <Link to="/login"> {t("If you have an account, go to login page")} </Link> </p>  
           {
-                isRegisterSucceed && <p>{t("Registration has been succeessfully completed!")}</p>
-            }
-            {
-                !isRegisterSucceed && <p>{t("Registration has been failed!")}</p>
-            }
+            isRegisterSucceed && <p>{t("Registration has been succeessfully completed!")}</p>
+          }
+          {/* {
+              !isRegisterSucceed  && <p>{t("Registration has been failed!")}</p>
+          } */}
+          
         </form>
         
   )
