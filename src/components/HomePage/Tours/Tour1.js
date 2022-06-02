@@ -29,7 +29,7 @@ const Tour1=()=>{
            
            <h3>{t("price")}{tour1.price} {t("ՀՀ դրամ")}</h3>
           
-               <button type="submit">ADD to favorites</button>
+               <button type="submit">{t("ADD to favorites")}</button>
                
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>Delete</button>
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'}>Edit</button>
@@ -39,8 +39,8 @@ const Tour1=()=>{
 
 
                <div className={classes.ticketBuy}>
-                <button>ԳՆԵԼ  տոմս</button>
-                <h5>{num}</h5>              
+                <button>{t("ԳՆԵԼ  տոմս")}</button>
+                <h5>{t("num")}</h5>              
                   <input type="number"/>  
                   <button type="submit">{t("Հաստատել")}</button>
               <p>{t("tour1.balance")}{tour1.price-2000}</p>

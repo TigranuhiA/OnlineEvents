@@ -18,6 +18,7 @@ export const EN = {
     "If you have an account, go to login page" : "If you have an account, go to login page",
     "Registration has been succeessfully completed!": "Registration has been succeessfully completed!",
     "Registration has been failed!": "Registration has been failed!",
+    "Registration has been failed! You have an account": "Registration has been failed! You have an account",
     Armenian: 'Armenian',
     Russian: 'Russian',
     English: 'English',
@@ -55,7 +56,15 @@ export const EN = {
     '1. Explore The First Christian Country In The world. 2.Take The Longest Ropeway In The World. 3.Taste The Most Ancient Cuisine In The South Caucasus ': 'Explore The First Christian Country In The world. 2.Take The Longest Ropeway In The World. 3.Taste The Most Ancient Cuisine In The South Caucasus ',
     '1. Yerevan, 2. 2. Shikahogh State Reserve, 3. Lake Sevan, 4. Dilijan national park, 5. Mount Aragats': '1. Yerevan, 2.  Shikahogh State Reserve, 3. Lake Sevan, 4. Dilijan national park, 5. Mount Aragats',
     'Armenia is known for its beautiful landscapes, its cuisine, culture and history.': 'Armenia is known for its beautiful landscapes, its cuisine, culture and history.',
-    "Contact Us": "Contact Us" 
+    "Contact us": "Contact Us",
+    Help : "Help",
+    "Wild Adventures": "Wild Adventures",
+    Discover: "Discover",
+    "About us": "About us",
+    "Where to Go": "Where to Go",
+    Services: "Services",
+    "My Account": "My Account"
+    
 }
 export const RU = {
     "travel with us": 'Путешествуй с нами',
@@ -77,6 +86,7 @@ export const RU = {
     "If you have an account, go to login page": "Если у вас есть учетная запись, перейдите на страницу входа",
     "Registration has been succeessfully completed!": "Регистрация успешно завершена!",
     "Registration has been failed!" : "Регистрация не удалась!",
+    "Registration has been failed! You have an account": "Регистрация не удалась! У вас есть аккаунт",
     Armenian: 'Армянский',
     Russian: 'Русский',
     English: 'Английский',
@@ -114,7 +124,14 @@ export const RU = {
     '1. Explore The First Christian Country In The world. 2.Take The Longest Ropeway In The World. 3.Taste The Most Ancient Cuisine In The South Caucasus ': "Исследуйте первую христианскую страну в мире. 2. Воспользуйтесь самой длинной канатной дорогой в мире. 3.Попробовать самую древнюю кухню Южного Кавказа",
     '1. Yerevan, 2. 2. Shikahogh State Reserve, 3. Lake Sevan, 4. Dilijan national park, 5. Mount Aragats': '1. Ереван, 2. Шикаохский государственный заповедник, 3. Озеро Севан, 4. Дилижанский национальный парк, 5. Гора Арагац',
     'Armenia is known for its beautiful landscapes, its cuisine, culture and history.': "Армения известна своими красивыми пейзажами, кухней, культурой и историей.",
-    "Contact Us": "Свяжитесь с нами"
+    "Contact us": "Свяжитесь с нами",
+    Help : "Помощь",
+    "Wild Adventures": "Дикие приключения",
+    Discover: "Откройте для себя",
+    "About us": "О нас",
+    "Where to Go": "Куда идти",
+    Services: "Услуги",
+    "My Account": "Мой счет"
 }
 export const AM = {
     "travel with us": 'Ճանապարհորդիր մեզ հետ',
@@ -136,6 +153,7 @@ export const AM = {
     "If you have an account, go to login page" : "Եթե ունեք օգտահաշիվ, գնացեք մուտքի էջ",
     "Registration has been succeessfully completed!" : "Գրանցումը հաջողությամբ կատարվեց" ,
     "Registration has been failed!" : "Գրանցումը ձախողվել է",
+    "Registration has been failed! You have an account": "Գրանցումը ձախողվել է: Դուք ունեք օգտահաշիվ",
     Armenian: 'Հայերեն',
     Russian: 'Ռուսերեն',
     English: 'Անգլերեն',
@@ -173,7 +191,14 @@ export const AM = {
     '1. Explore The First Christian Country In The world. 2.Take The Longest Ropeway In The World. 3.Taste The Most Ancient Cuisine In The South Caucasus ': "1. Բացահայտել աշխարհի առաջին քրիստոնյա երկիրը: 2. Նստել աշխարհի ամենաերկար ճոպանուղին: 3. Համտեսել Հարավային Կովկասի ամենահին խոհանոցը",
     '1. Yerevan, 2. 2. Shikahogh State Reserve, 3. Lake Sevan, 4. Dilijan national park, 5. Mount Aragats': '1. Երևան, 2. Շիկահող պետական արգելոց, 3. Սևանա լիճ, 4. Դիլիջան ազգային պարկ, 5. Արագած լեռ',
     'Armenia is known for its beautiful landscapes, its cuisine, culture and history.': "Հայաստանը հայտնի է իր գեղեցիկ բնապատկերներով, իր խոհանոցով, մշակույթով և պատմությամբ։",
-    "Contact Us": "Հետադարձ կապ"
+    "Contact us": "Հետադարձ կապ",
+    Help : "Օգնություն",
+    "Wild Adventures": "Վայրի արկածներ",
+    Discover: "Բացահայտեք",
+    "About us": "Մեր մասին",
+    "Where to Go": "Ուր գնալ",
+    Services: "Ծառայություններ",
+    "My Account": "Իմ հաշիվը"
 }
 
 const languages = {
