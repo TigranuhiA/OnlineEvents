@@ -4,28 +4,29 @@ import {price, num} from "../helpers/constant";
 import classes from './tour.module.css';
 import {useState, useContext} from "react"
 // import {useUserInfo} from "../../contexts/UserProvider";
-
+import { useTranslate} from "../../../contexts/LanguageProvider"
 
 const Tour1=()=>{
+    const {t} = useTranslate();
     // const {user} = useUserInfo()
     // const[userBalance, setUserBalance]=useState("")
     return (
         <div className={classes.container}>
-          <h1>{tour1.title}</h1>
+          <h1>{t("tour1.title")}</h1>
           <img  className={classes.tour_item} src={tour1.t_img} alt="#" />
-           <p>{tour1.text}</p> 
+           <p>{t("tour1.text")}</p> 
            
-           <h3>{price}{tour1.price} ՀՀ դրամ</h3>
+           <h3>{t("price")}{tour1.price} {t("ՀՀ դրամ")}</h3>
           
-               <button type="submit">ADD to favorites</button>
+               <button type="submit">{t("ADD to favorites")}</button>
 
                <div className={classes.ticketBuy}>
                  
-                <button>ԳՆԵԼ  տոմս</button>
-                <h5>{num}</h5>              
+                <button>{t("ԳՆԵԼ  տոմս")}</button>
+                <h5>{t("num")}</h5>              
                   <input type="number"/>  
-                  <button type="submit">Հաստատել</button>
-              <p>{tour1.balance}{tour1.price-2000}</p>
+                  <button type="submit">{t("Հաստատել")}</button>
+              <p>{t("tour1.balance")}{tour1.price-2000}</p>
            </div>
            
         </div>

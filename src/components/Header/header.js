@@ -26,20 +26,21 @@ const Header =() => {
         changeLanguage(event.target.value);
     }
 
-
     return (
         <header className={classes.header}>
             <div className={classes.divName}>
                 {t('travel with us')}
             </div>
             <div className={classes.divPhone}>
-            {t('phone')} 000 000000
+            {t('phone')} : 033 333-333
             </div>
 
             <ul className={classes.ul}>
                 {
                     HEADER_LINKS.map(link => {
-                        if ((link.title === "log in"  && user ) ||
+                        if (  
+                        (link.title === "home" && ( user || (link.title === "log in" && link.title === "register" ))) ||
+                        (link.title === "log in"  && user ) ||
                         (link.title === "register" && user )) {
                             return null;
                         }
@@ -50,8 +51,7 @@ const Header =() => {
                                     })}
                                     to={link.to}
                                 >{t(link.title)}</NavLink>
-
-                            </li>
+                </li>
                         )
                     })
                 }
