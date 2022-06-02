@@ -1,9 +1,10 @@
 import QA from "./consts";
 import React, { useState } from "react";
 import './questions.css'
+import { useTranslate} from "../../contexts/LanguageProvider"
 
 const Questions = () => {
-    
+    const {t} = useTranslate();
     const [list, setList] = useState(QA);
     //const[displayAnswer, setDisplayAnswer]=useState(true);
 
@@ -34,11 +35,11 @@ const Questions = () => {
                         <React.Fragment key={e.id}>
                             
                             <div className='questions'>
-                                <p>{e.question}</p>
+                                <p>{t("Questions:")} {t(e.question)}</p>
                                 <br></br>
-                                <p className={e.visible? 'answerShow': 'answerHide'}>{e.answer}</p>
+                                <p className={e.visible? 'answerShow': 'answerHide'}>{t("Answer:")} {t(e.answer)}</p>
                                 <br></br>
-                                <div><button onClick={but} name={e.id}>V</button></div>
+                                <button onClick={but} name={e.id}>V</button>
                             </div>
                              </React.Fragment>
                             
