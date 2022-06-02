@@ -23,14 +23,3 @@
     border:2px solid rgb(83, 74, 74);
 
 }
-
-.btn{
-    background-color: rgb(25, 167, 72);
-    height: 50px;
- border-radius: 45%;
- height: 70px;
-}
-.fav{
-    border: 1px solid rgb(157, 211, 38);
-    border-radius: 10% ;
-}
