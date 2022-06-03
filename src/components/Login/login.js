@@ -15,7 +15,7 @@ const Login = () => {
     const navigate = useNavigate()
     const {t} = useTranslate();
 
-    const {register, handleSubmit, formState: {errors, isValid}} = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = data => {
         axios.get(`${baseUrl}/users`)
             .then(res => {
@@ -59,6 +59,7 @@ const Login = () => {
             }
              )} 
              type="text" 
+             autocomplete="username"
              placeholder={t("Enter your login")} />
           </label>
             <div className={classes.div} > 
@@ -81,6 +82,7 @@ const Login = () => {
             }
              )} 
              type="password" 
+             autoComplete="new-password"
              placeholder={t("Enter your password")} />
           </label>
           <div className={classes.div}> 
@@ -91,7 +93,7 @@ const Login = () => {
               {t("Remember me")}
           </label>
           <label>
-            <input className={classes.submit} type="submit" disabled={isValid} value={t("log in")} /> 
+            <input className={classes.submit} type="submit" value={t("log in")} /> 
           </label>
         </form>
 

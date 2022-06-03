@@ -23,26 +23,26 @@ const Register = () => {
             .then(res => {
                 const user = res.data.find(user => user.name === data.login)
                 if (user) {
-                 alert(t("Registration has been failed! You have an account")) 
-                  setTimeout(() => {
+                 alert(t("Registration has been failed! You have an account"))
                     navigate('../login')
-                  }, 2000)
                 } 
                 else {
-                  // if(data.password !== data.repeatPassword){
-                  //   alert("Registration has been failed, parol")
-                  // }
-                  // else{
+                  console.log(data.password);
+                  console.log(data.repeatPassword);
+                  if(data.password !== data.repeatPassword){
+                    alert(t("Registration has been failed. Passwords aren't matched"))
+                  }
+                  else{
                     axios.post(`${baseUrl}/users`, {
                       name: data.login,
                       password: data.password,
-                      repeatPassword: data.repeatPassword
+                     repeatPassword: data.repeatPassword
                     })
                     setIsRegisterSucceed(true)
                     setTimeout(() => {
                       navigate('../login')
                   }, 2000)
-                  // }
+                }
                 } 
           })
     } 
@@ -65,6 +65,8 @@ const Register = () => {
             }
              )} 
              type="text" 
+             
+             autoComplete="new-password"
              placeholder={t("Enter your login")} />
           </label>
             <div className={classes.div} > 
@@ -87,6 +89,7 @@ const Register = () => {
             }
              )} 
              type="password" 
+             autoComplete="new-password"
              placeholder={t("Enter your password")}/>
           </label>
           <div className={classes.div}> 
@@ -94,7 +97,7 @@ const Register = () => {
           </div>
           <label className={classes.label}>
             <h3>{t("Repeat Password")}</h3>
-            <input className={classes.inputInfo} {...register("repeatpassword", {
+            <input className={classes.inputInfo} {...register("repeatPassword", {
               required: t("formMessageRequired"),
               minLength: {
                 value:3,
@@ -107,6 +110,7 @@ const Register = () => {
             }
              )} 
              type="password" 
+             autoComplete="new-password"
              placeholder={t("Repeat Password")}/>
           </label>
           <div className={classes.div}> 
@@ -114,7 +118,7 @@ const Register = () => {
           </div>
 
           <label>
-            <input className={classes.submit} type="submit"  value={t("register")} />
+            <input className={classes.submit} type="submit" value={t("register")} />
           </label>
 
           <p> <Link to="/login"> {t("If you have an account, go to login page")} </Link> </p>  

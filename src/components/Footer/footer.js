@@ -20,9 +20,9 @@ const Footer = () => {
     <Link to='contact'>{t("Contact us")}</Link>
     </div>
    
-    <Routes>
+    {/* <Routes>
         <Route path="contact" element={<ContactUs />} />
-    </Routes>
+    </Routes> */}
                <div className="footer_first">
                     <div className="footer_inner_first">
                          <ul>
