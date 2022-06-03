@@ -10,8 +10,10 @@ import { useTranslate } from "../../contexts/LanguageProvider";
 const Footer = () => {
   const {t} = useTranslate()
   
-  return (    
-    <>   
+  return (
+    
+    <>
+   
     <footer>
     <div className="foot">
     <Link to='home'>{t("home")}</Link>
@@ -41,7 +43,8 @@ const Footer = () => {
                               <li><a href='#'>{t("Services")}</a></li>
                          </ul>
                     </div>
-                 </div>
+         
+               </div>
               
                <div className="footer_second">
                     <p>Copyright ©2022 Tigranuhi Satik Tatev </p>
