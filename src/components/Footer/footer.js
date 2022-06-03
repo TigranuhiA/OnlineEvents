@@ -20,7 +20,7 @@ const Footer = () => {
     <Link to='contact'>{t("Contact us")}</Link>
     </div>
    
-    
+
                <div className="footer_first">
                     <div className="footer_inner_first">
                          <ul>
