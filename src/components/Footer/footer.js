@@ -41,8 +41,7 @@ const Footer = () => {
                               <li><a href='#'>{t("Services")}</a></li>
                          </ul>
                     </div>
-         
-               </div>
+                 </div>
               
                <div className="footer_second">
                     <p>Copyright ©2022 Tigranuhi Satik Tatev </p>
