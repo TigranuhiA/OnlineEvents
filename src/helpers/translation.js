@@ -32,7 +32,7 @@ export const EN = {
     price: "TICKET PRICE FOR 1 PERSON",
     "ՀՀ դրամ": "AMD",
     "tour1.balance": "Your account balance is / AMD /",
-    "ADD to favorites" : "ADD to favorites,",
+    "ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂՈՒՄ" : "ADD to favorites,",
     "ԳՆԵԼ  տոմս": "BUY TICKET",
     num: "Number of persons",
     Հաստատել:"Confirm",
@@ -63,8 +63,12 @@ export const EN = {
     "About us": "About us",
     "Where to Go": "Where to Go",
     Services: "Services",
-    "My Account": "My Account"
-    
+    "My Account": "My Account",
+    "ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ": "IF YOU WANT TO ORDER A TICKET, TICKET ENTER PERSONAL PAGE",
+    "ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ": "IF YOU HAVE NOT REGISTERED YET, CLICK HERE",
+    "Ձեր զամբյուղը":"Your cart",
+    Delete: "Delete",
+    Edit: "Edit"
 }
 export const RU = {
     "travel with us": 'Путешествуй с нами',
@@ -100,7 +104,7 @@ export const RU = {
     price: "СТОИМОСТЬ БИЛЕТА НА 1 ЧЕЛОВЕКА",
     "ՀՀ դրամ": "драм",
     "tour1.balance" :"Баланс вашего счета составляет / драм",
-    "ADD to favorites": "Добавить в избранное",
+    "ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂՈՒՄ": "Добавить в избранное",
     "ԳՆԵԼ  տոմս": "КУПИТЬ БИЛЕТ",
     num: "Количество человек",
     Հաստատել: "Подтвердить",
@@ -131,7 +135,12 @@ export const RU = {
     "About us": "О нас",
     "Where to Go": "Куда идти",
     Services: "Услуги",
-    "My Account": "Мой счет"
+    "My Account": "Мой счет",
+    "ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ":"ЕСЛИ ВЫ ХОТИТЕ ЗАКАЗАТЬ БИЛЕТ, ВОСПОЛЬЗУЙТЕСЬ ЛИЧНОЙ СТРАНИЦЕЙ",
+    "ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ":"ЕСЛИ ВЫ ЕЩЕ НЕ ЗАРЕГИСТРИРОВАЛИСЬ, НАЖМИТЕ ЗДЕСЬ",
+    "Ձեր զամբյուղը":"Ваша корзина",
+    Delete: "Удалить",
+    Edit: "Редактировать"
 }
 export const AM = {
     "travel with us": 'Ճանապարհորդիր մեզ հետ',
@@ -167,7 +176,7 @@ export const AM = {
     price: "ՏՈՄՍԻ ԱՐԺԵՔԸ 1 ԱՆՁԻ ՀԱՄԱՐ",
     "ՀՀ դրամ": "ՀՀ դրամ",
     "tour1.balance": "Ձեր հաշվի մնացորդը կազմում է /ՀՀ ԴՐԱՄ/",
-    "ADD to favorites": "Ավելացնել ընտրյալների մեջ",
+    "ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂՈՒՄ": "Ավելացնել ընտրյալների մեջ",
     "ԳՆԵԼ  տոմս": "ԳՆԵԼ  տոմս",
     num: "Անձերի քանակը",
     Հաստատել: "Հաստատել",
@@ -198,7 +207,12 @@ export const AM = {
     "About us": "Մեր մասին",
     "Where to Go": "Ուր գնալ",
     Services: "Ծառայություններ",
-    "My Account": "Իմ հաշիվը"
+    "My Account": "Իմ հաշիվը",
+    "ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ":"ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ",
+    "ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ":"ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ",
+    "Ձեր զամբյուղը":"Ձեր զամբյուղը",
+    Delete: "Ջնջել",
+    Edit: "Խմբագրել"
 }
 
 const languages = {

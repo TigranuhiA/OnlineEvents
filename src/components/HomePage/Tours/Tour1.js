@@ -33,23 +33,21 @@ const Tour1=()=>{
             {t("ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂՈՒՄ")}                  
                 </button>
                 {success && <div className={classes.fav}>
-                    <h3>Ձեր զամբյուղը</h3>
+                    <h3>{t("Ձեր զամբյուղը")}</h3>
                         <h4>{t("tour1.title")}</h4>
                         <p>{t("tour1.text")}</p>
                         </div>}
              {user && <AddToFavorites price={tour1.price}/>}
              
             {<div>
-                <div> <Link to="/login"> ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ </Link> </div>  
-            <div> <Link to="/login"> ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ </Link> </div>
+                <div> <Link to="/login"> {t("ԵԹԵ ՑԱՆԿԱՆՈՒՄ ԵՔ ՊԱՏՎԻՐԵԼ ՏՈՄՍ,  ՄՈՒՏՔ ԳՈՐԾԵՔ ԱՆՁՆԱԿԱՆ ԷՋ")} </Link> </div>  
+            <div> <Link to="/login"> {t("ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ")} </Link> </div>
             </div>
-            }     
-            
-                                             
-             <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>Delete</button>
-            <button  className={sessionStorage.getItem('user')==='admin'?'show':'hide'}>Edit</button>
-             <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>Delete</button>
-            <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>Edit</button>           
+            }                                     
+               <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
+               <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'}>{t("Edit")}</button>
+               <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>{t("Delete")}</button>
+               <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>{t("Edit")}</button>        
             
         </div>
     )
