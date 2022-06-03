@@ -4,7 +4,7 @@ import classes from './addToFavorites.module.css'
 
 
 
-const AddToFavorites = (props) => {
+const AddToFavorites = () => {
     const [userBalance, setUserBalance] = useState(100000)
 
     return (   

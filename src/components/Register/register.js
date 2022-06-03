@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import {useState} from "react";
 import {baseUrl} from "../../api/api";
 import axios from "axios";
-import Login from '../Login/login';
 import { useNavigate } from 'react-router-dom'; 
+import { useTranslate} from "../../contexts/LanguageProvider"
 
 
 
@@ -14,42 +14,58 @@ const Register = () => {
 
   const [isRegisterSucceed, setIsRegisterSucceed] = useState(false);
   const navigate = useNavigate()
+  const {t} = useTranslate();
     
   const {register, handleSubmit, formState: {errors}} = useForm();
+
     const onSubmit = data => {
-        axios.post(`${baseUrl}/users`, {
-            name: data.login,
-            password: data.password
-        })
-
-        setIsRegisterSucceed(true)
-        setTimeout(() => {
-          navigate('../login')
-          //{<Login />}
-        }, 1000)
-    }
-
-
+      axios.get(`${baseUrl}/users`)
+            .then(res => {
+                const user = res.data.find(user => user.name === data.login)
+                if (user) {
+                 alert(t("Registration has been failed! You have an account")) 
+                  setTimeout(() => {
+                    navigate('../login')
+                  }, 2000)
+                } 
+                else {
+                  // if(data.password !== data.repeatPassword){
+                  //   alert("Registration has been failed, parol")
+                  // }
+                  // else{
+                    axios.post(`${baseUrl}/users`, {
+                      name: data.login,
+                      password: data.password,
+                      repeatPassword: data.repeatPassword
+                    })
+                    setIsRegisterSucceed(true)
+                    setTimeout(() => {
+                      navigate('../login')
+                  }, 2000)
+                  // }
+                } 
+          })
+    } 
 
   return (
     <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-          <h1 className={classes.title}> Create an account</h1>
+          <h1 className={classes.title}> {t("Create an account")}</h1>
           <label className={classes.label}>
-            <h3>Register</h3>
+            <h3>{t('log in')}</h3>
             <input className={classes.inputInfo} {...register("login", {
-              required: "field must be required",
+              required: t("formMessageRequired"),
               minLength: {
                 value:3,
-                message: "The minimum length of the value 3"
+                message: t("formMessageMinLength")
               },
               maxLength: {
                 value:20,
-                message: "The max length of the value 20"
+                message: t("formMessageMaxLength")
               }
             }
              )} 
              type="text" 
-             placeholder="Enter your login" />
+             placeholder={t("Enter your login")} />
           </label>
             <div className={classes.div} > 
               {errors?.login && <p>{errors?.login?.message || "Error"}</p>}
@@ -57,54 +73,58 @@ const Register = () => {
 
 
           <label className={classes.label}>
-            <h3>Password</h3>
+            <h3>{t("password")}</h3>
             <input className={classes.inputInfo} {...register("password", {
-              required: "field must be required",
+              required: t("formMessageRequired"),
               minLength: {
                 value:3,
-                message: "The minimum length of the value 3"
+                message: t("formMessageMinLength")
               },
               maxLength: {
                 value:20,
-                message: "The max length of the value 20"
+                message: t("formMessageMaxLength")
               }
             }
              )} 
              type="password" 
-             placeholder="Enter your password" />
+             placeholder={t("Enter your password")}/>
           </label>
           <div className={classes.div}> 
               {errors?.password && <p>{errors?.password?.message || "Error"}</p>}
           </div>
           <label className={classes.label}>
-            <h3>Repeat Password</h3>
+            <h3>{t("Repeat Password")}</h3>
             <input className={classes.inputInfo} {...register("repeatpassword", {
-              required: "field must be required",
+              required: t("formMessageRequired"),
               minLength: {
                 value:3,
-                message: "The minimum length of the value 3"
+                message: t("formMessageMinLength")
               },
               maxLength: {
                 value:20,
-                message: "The max length of the value 20"
+                message: t("formMessageMaxLength")
               }
             }
              )} 
              type="password" 
-             placeholder="Repeat your password" />
+             placeholder={t("Repeat Password")}/>
           </label>
           <div className={classes.div}> 
               {errors?.password && <p>{errors?.password?.message || "Error"}</p>}
           </div>
 
           <label>
-            <input className={classes.submit} type="submit" value="Register" />
+            <input className={classes.submit} type="submit"  value={t("register")} />
           </label>
 
-          <p> <Link to="/login"> If you have an account, go to login page </Link> </p>  
+          <p> <Link to="/login"> {t("If you have an account, go to login page")} </Link> </p>  
           {
-                isRegisterSucceed && <p>Registration has been succeessfully completed!</p>
-            }
+            isRegisterSucceed && <p>{t("Registration has been succeessfully completed!")}</p>
+          }
+          {/* {
+              !isRegisterSucceed  && <p>{t("Registration has been failed!")}</p>
+          } */}
+          
         </form>
         
   )
