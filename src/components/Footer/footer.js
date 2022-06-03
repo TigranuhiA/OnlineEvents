@@ -10,10 +10,8 @@ import { useTranslate } from "../../contexts/LanguageProvider";
 const Footer = () => {
   const {t} = useTranslate()
   
-  return (
-    
-    <>
-   
+  return (    
+    <>   
     <footer>
     <div className="foot">
     <Link to='home'>{t("home")}</Link>
