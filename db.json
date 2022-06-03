@@ -1,28 +1,27 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "name": "Satik",
-      "password": "11111",
-      "money": "1000000"
-    },
-    {
-      "id": "2",
-      "name": "Tatev",
-      "password": "22222",
-      "money": "1000000"
-    },
-    {
-      "id": "3",
-      "name": "Tigranuhi",
-      "password": "33333",
-      "money": "1000000"
-    },
-    {
-      "id": "4",
-      "name": "admin",
-      "password": "44444",
-      "money": "100000"
-    }
-  ]
+    "users": [{
+            "id": "1",
+            "name": "Satik",
+            "password": "11111",
+
+        },
+        {
+            "id": "2",
+            "name": "Tatev",
+            "password": "22222",
+
+        },
+        {
+            "id": "3",
+            "name": "Tigranuhi",
+            "password": "33333",
+
+        },
+        {
+            "id": "4",
+            "name": "admin",
+            "password": "44444",
+
+        }
+    ]
 }

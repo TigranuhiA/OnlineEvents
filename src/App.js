@@ -14,6 +14,7 @@ import Tour3 from './components/HomePage/Tours/Tour3';
 import Tour4 from './components/HomePage/Tours/Tour4';
 import Tour5 from './components/HomePage/Tours/Tour5';
 import Tour6 from './components/HomePage/Tours/Tour6';
+import ContactUs from './components/Footer/contacts';
 
 
 function App() {
@@ -21,14 +22,13 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-        <Route path="homepage/*" element={<HomePage />}>
-          <Route path="tour1" element={<Tour1/>}/>
-          <Route path="tour2" element={<Tour2/>}/>
-          <Route path="tour3" element={<Tour3/>}/>
-          <Route path="tour4" element={<Tour4/>}/>
-          <Route path="tour5" element={<Tour5/>}/>
-          <Route path="tour6" element={<Tour6/>}/>
-        </Route>
+        <Route path="homepage" element={<HomePage />} />
+        <Route path="homepage/tour1" element={<Tour1/>}/>
+        <Route path="homepage/tour2" element={<Tour2/>}/>
+        <Route path="homepage/tour3" element={<Tour3/>}/>
+        <Route path="homepage/tour4" element={<Tour4/>}/>
+        <Route path="homepage/tour5" element={<Tour5/>}/>
+        <Route path="homepage/tour6" element={<Tour6/>}/>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path='*' element={<Navigate to="homepage" replace/>} />
