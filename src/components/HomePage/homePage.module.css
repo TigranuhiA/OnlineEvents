@@ -16,9 +16,9 @@
 }
 .tourHeader{
    
-        background: linear-gradient(to left, transparent 0%, blue 30%, transparent 100%);
+        background: linear-gradient(to left, transparent 0%, rgb(175, 194, 187) 30%, transparent 100%);
     padding: 20px;
-    border: 2px solid red
+    border: 2px solid rgb(108, 156, 139)
 }
 
 .tour_item{
