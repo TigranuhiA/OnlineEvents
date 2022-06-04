@@ -64,7 +64,7 @@ const Register = () => {
              )} 
              type="text" 
              
-             autoComplete="new-password"
+             autoComplete="username"
              placeholder={t("Enter your login")} />
           </label>
             <div className={classes.div} > 
