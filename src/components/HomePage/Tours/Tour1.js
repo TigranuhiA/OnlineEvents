@@ -12,14 +12,25 @@ const Tour1=()=>{
     const {user} = useUserInfo();
     const {t} = useTranslate();
     const [success, setSuccess]=useState(false)
-    const {status, setStatus}=useState(true);
-    const deletePost =() => {
-        axios.delete('http://localhost:3001/homepage/tour1')
-        .then(()=>setStatus(false))
-    }
+    //const [tour, setTour]=useState(tour1);
+    const[isVisible, setisVisible]=useState(true);
+    
+    const deletePost=()=>{
+        setisVisible(prev=>!prev);
+    };
+   
+    // const {status, setStatus}=useState(true);
+    // const deletePost =() => {
+    //     axios.delete('http://localhost:3001/homepage/tour1')
+    //     .then(()=>setStatus(false))
+    // }
+
+
+    
     
     return (
         <div className={classes.container}>
+        <div className={isVisible? 'divShow': 'divHide'}>
           <div>
           <h1>{t("tour1.title")}</h1>
              <img  className={classes.tour_item} src={tour1.t_img} alt="#" />
@@ -46,10 +57,10 @@ const Tour1=()=>{
             }                                     
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'}>{t("Edit")}</button>
-               <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>{t("Delete")}</button>
-               <button className={localStorage.getItem('user')==='admin'?'show':'hide'}>{t("Edit")}</button>        
+               
             
         </div>
+    </div>
     )
 }
 

@@ -1,7 +1,7 @@
-.show {
+.divShow {
     display: block;
 }
 
-.hide {
+.divHide {
     display: none;
 }

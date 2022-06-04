@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
+
 import './footer.css';
 import './contacts'
-import { Route, Routes } from 'react-router-dom';
 import ContactUs from "./contacts";
 import { useTranslate } from "../../contexts/LanguageProvider";
+import { useState } from "react";
 
 
 
 const Footer = () => {
   const {t} = useTranslate()
+  const[isContact, setisContact]=useState(false);
+
+  const click=()=>{
+       setisContact(true)
+  }
   
   return (
     
@@ -16,9 +21,10 @@ const Footer = () => {
    
     <footer>
     <div className="foot">
-    <Link to='home'>{t("home")}</Link>
-    <Link to='contact'>{t("Contact us")}</Link>
+    <a href='#'>{t("home")}</a>
+    <a href='#' onClick={click}>{t("Contact Us")}</a>
     </div>
+    {isContact && <ContactUs />}
    
 
                <div className="footer_first">
