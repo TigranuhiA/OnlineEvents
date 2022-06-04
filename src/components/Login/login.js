@@ -59,7 +59,7 @@ const Login = () => {
             }
              )} 
              type="text" 
-             autocomplete="username"
+             autoComplete="username"
              placeholder={t("Enter your login")} />
           </label>
             <div className={classes.div} > 
