@@ -39,7 +39,7 @@ const Header =() => {
                 {
                     HEADER_LINKS.map(link => {
                         if (  
-                        (link.title === "home" && ( user || (link.title === "log in" && link.title === "register" ))) ||
+                        //(link.title === "home" && ( user || (link.title === "log in" && link.title === "register" ))) ||
                         (link.title === "log in"  && user ) ||
                         (link.title === "register" && user )) {
                             return null;
