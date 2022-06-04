@@ -1,6 +1,9 @@
+
+import './footer.css';
+
 const ContactUs=()=>{
     return(
-        <ul>
+        <ul className="contact">
             <li>Address: Paradise</li>
             <li>Phone: 000000000</li>
             <li>E-mail: paradise@gmail.com</li>

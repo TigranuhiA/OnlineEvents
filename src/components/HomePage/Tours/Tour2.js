@@ -17,9 +17,14 @@ const Tour2=()=>{
     //     axios.delete('http://localhost:3001/homepage/tour2')
     //     .then(()=>setStatus(false))
     // }
+    const[isVisible, setisVisible]=useState(true);
     
+    const deletePost=()=>{
+        setisVisible(prev=>!prev);
+    };
     return (
         <div className={classes.container}>
+            <div className={isVisible? 'divShow': 'divHide'}>
           <div>
           <h1>{t("tour2.title")}</h1>
              <img  className={classes.tour_item} src={tour2.t_img} alt="#" />
@@ -44,7 +49,7 @@ const Tour2=()=>{
             }                                     
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
                     
-            
+            </div>   
         </div>
     )
 }

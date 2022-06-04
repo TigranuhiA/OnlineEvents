@@ -12,11 +12,17 @@ const Tour5=()=>{
     const {user} = useUserInfo();
     const {t} = useTranslate();
     const [success, setSuccess]=useState(false)
-    //const {status, setStatus}=useState(true);
+    // const {status, setStatus}=useState(true);
     // const deletePost =() => {
     //     axios.delete('http://localhost:3001/homepage/tour5')
     //     .then(()=>setStatus(false))
     // }
+
+    const[isVisible, setisVisible]=useState(true);
+    
+    const deletePost=()=>{
+        setisVisible(prev=>!prev);
+    };
     
     return (
         <div className={classes.container}>
@@ -44,7 +50,7 @@ const Tour5=()=>{
             }                                     
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
                
-                       
+               
             
         </div>
     )
