@@ -27,8 +27,6 @@ const Register = () => {
                     navigate('../login')
                 } 
                 else {
-                  console.log(data.password);
-                  console.log(data.repeatPassword);
                   if(data.password !== data.repeatPassword){
                     alert(t("Registration has been failed. Passwords aren't matched"))
                   }

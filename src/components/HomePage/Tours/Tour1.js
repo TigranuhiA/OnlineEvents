@@ -25,9 +25,6 @@ const Tour1=()=>{
     //     .then(()=>setStatus(false))
     // }
 
-
-    
-    
     return (
         <div className={classes.container}>
         <div className={isVisible? 'divShow': 'divHide'}>
@@ -56,8 +53,6 @@ const Tour1=()=>{
             </div>
             }                                     
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
-               <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'}>{t("Edit")}</button>
-               
             
         </div>
     </div>

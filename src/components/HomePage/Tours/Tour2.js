@@ -48,8 +48,8 @@ const Tour2=()=>{
             </div>
             }                                     
                <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
-              
-        </div>
+                    
+            </div>   
         </div>
     )
 }
