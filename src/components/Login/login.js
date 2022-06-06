@@ -38,11 +38,15 @@ const Login = () => {
                     
                 }
         })
+
+        console.log('TEST1   ', localStorage.getItem('user'));
+        console.log('TEST2   ', sessionStorage.getItem('user'))
   }
 
     return (
       <div>
         <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+
           <h1 className={classes.title}> {t("log in")}</h1>
           <label className={classes.label}>
             <h3>{t('log in')}</h3>

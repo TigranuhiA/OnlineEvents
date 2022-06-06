@@ -25,6 +25,9 @@ const Tour1=()=>{
     //     .then(()=>setStatus(false))
     // }
 
+
+    
+    
     return (
         <div className={classes.container}>
         <div className={isVisible? 'divShow': 'divHide'}>
@@ -52,8 +55,10 @@ const Tour1=()=>{
             <div> <Link to="/register"> {t("ԵԹԵ ԴԵՌ ՉԵՔ ԳՐԱՆՑՎԵԼ, ՍԵՂՄԵՔ ԱՅՍՏԵՂ")} </Link> </div>
             </div>
             }                                     
-               <button className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
-            
+               <button  style={{backgroundColor: 'rgb(241, 144, 243)', borderRadius: '45%', height: '50px', width: '70px'}} 
+
+            className={localStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
+             <h4>TEST{localStorage.getItem('user')}</h4>
         </div>
     </div>
     )
