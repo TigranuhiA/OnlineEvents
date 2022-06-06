@@ -57,8 +57,8 @@ const Tour1=()=>{
             }                                     
                <button  style={{backgroundColor: 'rgb(241, 144, 243)', borderRadius: '45%', height: '50px', width: '70px'}} 
 
-className={sessionStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
-             s
+            className={localStorage.getItem('user')==='admin'?'show':'hide'} onClick={()=>deletePost()}>{t("Delete")}</button>
+             <h4>TEST{localStorage.getItem('user')}</h4>
         </div>
     </div>
     )
