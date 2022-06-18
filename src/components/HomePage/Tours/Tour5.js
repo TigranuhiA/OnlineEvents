@@ -6,7 +6,7 @@ import {useUserInfo} from "../../../contexts/UserProvider";
 import AddToFavorites from "../addToFavorites/AddToFavorites";
 import {useState} from "react";
 import './tours.css';
-import axios from "axios";
+// import axios from "axios";
 import { useTranslate} from "../../../contexts/LanguageProvider"
 const Tour5=()=>{
     const {user} = useUserInfo();

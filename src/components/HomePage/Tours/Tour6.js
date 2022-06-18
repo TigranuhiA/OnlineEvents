@@ -1,12 +1,12 @@
 import React from "react";
 import { Link  } from 'react-router-dom';
-import {tour6, price} from "../helpers/constant";
+import {tour6} from "../helpers/constant";
 import classes from './tour.module.css';
 import {useUserInfo} from "../../../contexts/UserProvider";
 import AddToFavorites from "../addToFavorites/AddToFavorites";
 import {useState} from "react";
 import './tours.css';
-import axios from "axios";
+// import axios from "axios";
 import { useTranslate} from "../../../contexts/LanguageProvider"
 const Tour6=()=>{
     const {user} = useUserInfo();
@@ -59,8 +59,4 @@ const Tour6=()=>{
 
 export default Tour6
 
- {/* <h1>{t("tour1.title")}</h1>
-          <img  className={classes.tour_item} src={tour1.t_img} alt="#" />
-           <p>{t("tour1.text")}</p> 
-           
-           <h3>{t("price")}{tour1.price} {t("ՀՀ դրամ")}</h3> */}
+ 

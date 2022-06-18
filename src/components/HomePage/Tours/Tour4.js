@@ -6,7 +6,7 @@ import {useUserInfo} from "../../../contexts/UserProvider";
 import AddToFavorites from "../addToFavorites/AddToFavorites";
 import {useState} from "react";
 import './tours.css';
-import axios from "axios";
+// import axios from "axios";
 import { useTranslate} from "../../../contexts/LanguageProvider"
 const Tour4=()=>{
     const {user} = useUserInfo();
@@ -57,9 +57,3 @@ const Tour4=()=>{
 }
 
 export default Tour4
-
- {/* <h1>{t("tour1.title")}</h1>
-          <img  className={classes.tour_item} src={tour1.t_img} alt="#" />
-           <p>{t("tour1.text")}</p> 
-           
-           <h3>{t("price")}{tour1.price} {t("ՀՀ դրամ")}</h3> */}
